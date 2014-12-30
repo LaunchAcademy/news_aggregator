@@ -19,6 +19,8 @@ RSpec.feature "add article" do
     click_button "Submit Article"
 
     expect(page).to have_content("Could not save article.")
+    expect(page).to have_content("Title can't be blank")
+    expect(page).to have_content("Url can't be blank")
     expect(Article.count).to eq(0)
   end
 end
