@@ -12,4 +12,13 @@ RSpec.feature "add article" do
     expect(page).to have_link("Some Fascinating Article",
       href: "http://www.google.com")
   end
+
+  scenario "submit form with invalid data" do
+    visit "/articles/new"
+
+    click_button "Submit Article"
+
+    expect(page).to have_content("Could not save article.")
+    expect(Article.count).to eq(0)
+  end
 end
