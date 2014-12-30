@@ -3,7 +3,7 @@
 <%= form_for @article do |f| %>
 
   <% if @article.errors.any? %>
-    <ul>
+    <ul class="errors">
       <% @article.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
