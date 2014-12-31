@@ -11,6 +11,7 @@ gem "jquery-rails"
 group :development, :test do
   gem "spring"
   gem "rspec-rails"
+  gem "valid_attribute"
   gem "capybara"
   gem "factory_girl_rails"
 end
